@@ -1,5 +1,5 @@
 <title>Awesome Pokemon and Voltorbs</title>
-<body text="blue" bgcolor="yellow" background="pictures/sbap.gif">
+<body text="blue" background="pictures/sbap.gif">
 	<center>
 		<h1>iamjonanthony</h1>
 		<marquee>
@@ -10,7 +10,7 @@
 		<img height=100 src="pictures/cloyster.gif" alt="Cloyster moving his shell, eyes, and mouth">
 		<p>These three are my favorites!</p>
 		<img src="pictures/fire.gif" alt="Mewtwo in front of fire">
-		<img onclick="noclick.play()" height=269 src="pictures/me.jpg" alt="Jon Anthony smiling in front of the world">
+		<img id="jonanthony" height=269 src="pictures/me.jpg" alt="Jon Anthony smiling in front of the world">
 		<p>Mewtwo is looking at me!</p>
 		<h2>My Favorite Pokemon</h2>
 		<ol>
@@ -25,4 +25,15 @@
 	<audio src="greeting.mp3" autoplay></audio>
 	<audio src="dontclick.mp3" id="noclick"></audio>
 	<audio src="pikachu.mp3" id="pikachu"></audio>
+	<script>
+		// When you click, change the picture, play the sound
+		jonanthony.onclick = function () {
+			jonanthony.src = "pictures/punch.gif";
+			noclick.play();
+		};
+		// When the sound finishes, change the picture back
+		noclick.onended = function () {
+			jonanthony.src = "pictures/me.jpg";
+		};
+	</script>
 </body>
