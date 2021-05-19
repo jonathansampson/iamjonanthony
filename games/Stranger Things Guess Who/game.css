@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    line-height: 500%;
+    transition: all 3s;
+}
+
+body.bloody {
+    color: white;
+    background: red;
+}
+
+.blurry {
+    filter: blur(30px);
+}
+
+img#answer {
+    width: 200px;
+}
+
+input {
+    font-size: 300%;
+}
+
+.question {
+    font-size: 250%;
+}
+
+.animate {
+    transform-origin: 50% 100%;
+    animation: rocking ease-in-out 2s alternate infinite;
+}
+
+@keyframes rocking {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+     50% {
+         transform: scale(.25) rotate(0deg);
+     }
+    to {
+        transform: scale(1) rotate(360deg);
+    }
+}
